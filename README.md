@@ -10,3 +10,4 @@ In this project, we attempt to reproduce and improve the results achieved by Yoo
 Parallel Layers: This multichannel n-gram model is proposed in [1], but simpler since it does not use static and non-static word2vec for each channel. Non-static embedding layer, is input to 3 parallel CNN (not one for each branch as previous model) with 3, 4 and 5 kernel size and output of these parallel layers, then max-pooled and merged. To avoid overfitting of models, a dropout layer with probability of 0.5 is applied once on the concatenation of the max features. figure 3 shows this model
 
 <br /> ![Screen Shot 2019-04-24 at 14 10 09](https://user-images.githubusercontent.com/35403990/56683946-aaeb7600-669c-11e9-9dba-27c601f71e64.png)
+<br /> ![Screen Shot 2019-04-24 at 14 10 03](https://user-images.githubusercontent.com/35403990/56684250-5c8aa700-669d-11e9-8aa4-8ff94afb97d0.png)
