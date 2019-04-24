@@ -3,7 +3,8 @@ In this project, we attempt to reproduce and improve the results achieved by Yoo
 <br /> For this project, we reproduce 3 models proposed by Yoon Kim (1-3), and also improve the baseline of Static & Non-static CNN in our model (4):
 <br />1. CNN-rand: random initialization of word vector + CNN
 <br />2. CNN-static: pre-trained word vectors (word2vec) + CNN
-<br />3. CNN-non-static: same as 2, but allow fine-tuning of word vectors for current task 4. CNN-multichannel: parallel multichannel 2,3,4-Gram model + CNN
+<br />3. CNN-non-static: same as 2, but allow fine-tuning of word vectors for current task 
+<br />4. CNN-multichannel: parallel multichannel 2,3,4-Gram model + CNN
 # Modified Baseline Model
 <br />3 Different kernel size, 3-channel: 
 <br />3This modification attempts to improve accuracy, by using three input channels for processing 4-grams, 6-grams, and 8-grams of movie review text. Each channel is comprised of the following elements: 1) Input layer which takes length of input sequences as parameter. 2) Embedding layer set to the size of the vocabulary and 100-dimensional real-valued representations using static vectors.3) One-dimensional convolutional layer with 32 filters and a kernel size set to the number of words to read at once. 4) Max Pooling layer to consolidate the output from the convolutional layer. 5) Flatten layer to reduce the three-dimensional output to two dimensional for concatenation. The output from the three channels are concatenated into a single vector and process by a Dense layer and an output layer. Figure 2 shows this model.
